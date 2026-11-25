@@ -1,41 +1,95 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Konnect Gambia</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KonnectGambia - Find Trusted Businesses Near You</title>
 <style>
-body{font-family:Arial;margin:0;background:#f4f4f4;text-align:center}
-header{background:#008751;color:white;padding:30px 15px}
-header h1{margin:0;font-size:32px}
-header p{font-size:17px}
-.box{background:white;margin:15px;padding:20px;border-radius:12px}
-a.btn{display:inline-block;background:#FF6B00;color:white;padding:14px 25px;border-radius:30px;text-decoration:none;font-weight:bold;margin-top:10px}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{background:#f6f9f3;color:#222}
+.top{background:#0a7a3a;color:#fff;padding:12px 15px;display:flex;justify-content:space-between;align-items:center}
+.top b{font-size:20px} .top b span{color:#ff7a00}
+.hero{padding:25px 15px;text-align:center;background:#fff}
+.hero h1{font-size:30px;color:#0a5a2e;line-height:1.1}
+.hero p{margin:12px 0;color:#555}
+.addbtn{display:block;background:#ff6a00;color:#fff;text-align:center;padding:16px;margin:15px;border-radius:12px;font-weight:900;font-size:20px;text-decoration:none}
+.prices{display:flex;gap:12px;padding:0 15px}
+.price{flex:1;background:#fff;border:3px solid #0a7a3a;border-radius:12px;padding:15px;text-align:center}
+.price.promo{border-color:#ff6a00;position:relative}
+.price h3{font-size:18px}.price .amt{font-size:38px;font-weight:900;color:#0a5a2e}
+.price.promo .amt{color:#c24100}
+.price p{font-size:13px;margin-top:8px;text-align:left}
+.badge{background:#ff6a00;color:#fff;font-size:11px;padding:4px 8px;border-radius:20px;position:absolute;top:-12px;right:10px}
+.steps{background:#d9ecd2;margin:15px;border-radius:12px;padding:15px;text-align:center}
+.steps h2{font-size:18px;margin-bottom:12px}
+.steps-grid{display:flex;gap:8px}
+.step{flex:1;background:#fff;border-radius:10px;padding:10px 5px;font-size:12px}
+.step div{font-size:22px}
+.form{background:#fff;margin:15px;border-radius:12px;padding:18px}
+.form h2{text-align:center;color:#0a5a2e;margin-bottom:5px}
+.form p{text-align:center;font-size:13px;color:#666;margin-bottom:12px}
+input,select,textarea{width:100%;padding:13px;margin:7px 0;border:1px solid #ccc;border-radius:10px;font-size:15px}
+button{width:100%;background:#25D366;color:#fff;border:0;padding:16px;border-radius:10px;font-weight:900;font-size:17px;margin-top:8px}
+.pay{margin:15px;background:#fff;border:2px solid #ff6a00;border-radius:12px;padding:15px}
+.pay b{color:#0a5a2e}
+footer{background:#0a7a3a;color:#fff;text-align:center;padding:15px;font-size:13px}
 </style>
 </head>
 <body>
-<header>
-<h1>Konnect Gambia</h1>
-<p>Connecting Local Businesses Across The Gambia</p>
-<a class="btn" href="https://wa.me/2200000000">Chat on WhatsApp</a>
-</header>
-
-<div class="box">
-<h2>What We Do</h2>
-<p>We help Gambian businesses get seen, get customers, and grow online.</p>
+<div class="top"><b>Konnect<span>Gambia</span></b><span>🇬🇲</span></div>
+<div class="hero">
+<h1>KonnectGambia -<br>Find Trusted<br>Businesses Near You</h1>
+<p>Your go-to directory for trusted local businesses across The Gambia</p>
 </div>
-
-<div class="box">
-<h2>Our Services</h2>
-<p>✅ Business Listings<br>✅ Online Shops<br>✅ Advertising<br>✅ Digital Marketing</p>
+<a class="addbtn" href="#register">+ ADD MY BUSINESS - Join Now</a>
+<div class="prices">
+<div class="price"><h3>STANDARD</h3><div class="amt">D2,500</div><p>✅ Your business appears on KonnectGambia</p></div>
+<div class="price promo"><span class="badge">POPULAR</span><h3>PROMO</h3><div class="amt">D3,500</div><p>✅ Appears + Promoted on top<br>✅ Promoted on WhatsApp Status</p></div>
 </div>
-
-<div class="box">
-<h2>Join Us</h2>
-<p>Are you a business in Sukuta, Banjul, Serrekunda or anywhere in Gambia?</p>
-<p>Join Konnect Gambia today!</p>
-<a class="btn" href="https://wa.me/2200000000">Register Your Business</a>
+<div class="steps">
+<h2>How It Works - Get Listed in 4 Easy Steps</h2>
+<div class="steps-grid">
+<div class="step"><div>📝</div><b>1. Fill Form</b><br>Complete the business form</div>
+<div class="step"><div>🖼️</div><b>2. Upload Pictures</b><br>Add photos of your business</div>
+<div class="step"><div>💳</div><b>3. Pay to Wave</b><br>Send payment via Wave</div>
+<div class="step"><div>✅</div><b>4. Join Automatically</b><br>You're live on the app!</div>
 </div>
-
-<p>© 2026 Konnect Gambia</p>
+</div>
+<div class="form" id="register">
+<h2>Register Your Business</h2>
+<p>Fill this form, pay, and get listed</p>
+<input id="bname" placeholder="Business Name * e.g. A.B Barbing Shop">
+<input id="owner" placeholder="Your Full Name *">
+<input id="phone" placeholder="WhatsApp Number * e.g. 833488462">
+<select id="cat"><option>Select Category</option><option>Barbing / Salon</option><option>Tailoring</option><option>Food / Restaurant</option><option>Shop / Store</option><option>Pharmacy / Health</option><option>Tech / Repair</option><option>Other</option></select>
+<input id="loc" placeholder="Location * e.g. Sukuta, Banjul, Serekunda">
+<select id="plan"><option>STANDARD - D2,500</option><option>PROMO - D3,500 - Most Popular</option></select>
+<textarea id="desc" placeholder="What does your business do?"></textarea>
+<input id="waveid" placeholder="Wave Transaction ID after you pay">
+<button onclick="sendWA()">SUBMIT & SEND TO WHATSAPP →</button>
+<p style="margin-top:10px">After submit, send your business photos + Wave screenshot on WhatsApp.</p>
+</div>
+<div class="pay">
+<b>Payment Info:</b><br>
+Pay via Wave: <b>833488462</b><br>
+Account Name: <b>Abdoulie Colley - KonnectGambia</b><br>
+<br>1. Pay D2,500 or D3,500 to Wave above<br>2. Copy Transaction ID into form<br>3. Submit form
+</div>
+<footer>Trusted by local businesses across The Gambia<br>Questions? WhatsApp: 833488462<br>© 2026 KonnectGambia</footer>
+<script>
+function sendWA(){
+let n=document.getElementById('bname').value;
+let o=document.getElementById('owner').value;
+let p=document.getElementById('phone').value;
+let c=document.getElementById('cat').value;
+let l=document.getElementById('loc').value;
+let pl=document.getElementById('plan').value;
+let d=document.getElementById('desc').value;
+let w=document.getElementById('waveid').value;
+if(!n||!p){alert('Please fill Business Name and WhatsApp Number');return;}
+let msg="NEW KONNECTGAMBIA REGISTRATION%0A%0ABusiness: "+n+"%0AOwner: "+o+"%0APhone: "+p+"%0ACategory: "+c+"%0ALocation: "+l+"%0APlan: "+pl+"%0ADescription: "+d+"%0AWave ID: "+w+"%0A%0AI have paid, please list me!";
+window.open("https://wa.me/220833488462?text="+msg);
+}
+</script>
 </body>
 </html>
